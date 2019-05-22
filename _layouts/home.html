@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{{content}}
+
+<hr>
+
+<h2>Upcoming Events</h2>
+
+{% assign upcoming = site.data.events.events | where:"status", "live" %}
+{% for post in upcoming %}
+  <article>
+    <h3><a href="{{post.url}}">{{post.name.html}}</a></h3>
+    {{post.summary}}
+    <div>
+    <p>
+    {% if post.is_free %}
+      <a class="button" href="{{post.url}}">Register</a>
+    {% else %}
+      <a class="button" href="{{post.url}}">Get a ticket</a>
+    {% endif %}
+    </p>
+  </div>
+  </article>
+{% endfor %}
+
+<hr>
+
+<h2>Latest posts</h2>
+
+{% for post in site.posts limit:3 %}
+  <article>
+    <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+    <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
+  </article>
+{% endfor %}
+
+<a class="button" href="{{ 'blog/'   | relative_url }}">View more</a>

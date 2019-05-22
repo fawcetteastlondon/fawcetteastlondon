@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% assign upcoming = site.data.events.events | where:"status", "live" %}
+{% assign previous = site.data.events.events | where:"status", "completed" %}
+
+<h2>Upcoming Events</h2>
+
+{% for post in upcoming %}
+  <article>
+    <h3><a href="{{post.url}}">{{post.name.html}}</a></h3>
+    {{post.summary}}
+    <div>
+    <p>
+    {% if post.is_free %}
+      <a class="button" href="{{post.url}}">Register</a>
+    {% else %}
+      <a class="button" href="{{post.url}}">Get a ticket</a>
+    {% endif %}
+    </p>
+  </div>
+  </article>
+{% endfor %}
+
+<hr>
+
+<h2>Recent Events</h2>
+
+{% for post in previous limit:10 %}
+  <article>
+    <h3><a href="{{post.url}}">{{post.name.html}}</a></h3>
+    {{post.summary}}
+  </article>
+{% endfor %}
