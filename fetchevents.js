@@ -2,7 +2,7 @@
 
 const request = require('request');
 const fs = require('fs');
-const token = 'Bearer ' + process.env.TOKEN;
+const token = 'Bearer ' + process.env.EVENTBRITE_TOKEN;
 
 console.log(process.env);
 
