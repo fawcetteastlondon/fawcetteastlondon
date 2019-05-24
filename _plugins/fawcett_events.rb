@@ -10,7 +10,7 @@ module Fawwcett_Events
     def generate(site)
       headers = { "Authorization" => 'Bearer ' + ENV['EVENTBRITE_TOKEN'] }
       uri = URI.parse('https://www.eventbriteapi.com/v3/organizations/217989441861/events/')
-      #uri.query = URI.encode_www_form({ :order_by => "start_desc" })
+      uri.query = URI.encode_www_form({ :order_by => "start_desc" })
       site.data['events'] = JSON.load(open(uri, headers))
     end
   end
