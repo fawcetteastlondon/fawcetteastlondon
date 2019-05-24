@@ -17,8 +17,12 @@ var options = {
   },
   rejectUnauthorized: false
 };
-var path = './_data/events.json';
-var ws = fs.createWriteStream(path);
+var dir = './_data';
+var filename = '/events.json';
+if (!fs.existsSync(dir)){
+  fs.mkdirSync(dir);
+}
+var ws = fs.createWriteStream(dir+filename);
 
 // Start the request
 request(options).on('error', function (error) {
