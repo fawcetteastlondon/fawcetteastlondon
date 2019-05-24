@@ -1,6 +1,7 @@
 body {
     max-width: 800px;
-    margin: 60px auto;
+    margin: 30px auto;
+    padding: 30px;
     font-family: "Nunito Sans", sans-serif;
     font-size: 21px;
     line-height: 1.5;
