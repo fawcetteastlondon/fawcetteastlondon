@@ -1,4 +1,5 @@
 ---
-layout: events
 title: Events
+layout: events
 ---
+
