@@ -4,7 +4,3 @@ description: >-
   Fawcett East London
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /blog/:year/:title:output_ext
-
-exclude:
-  - fetchevents.js
-
