@@ -1,6 +1,14 @@
+---
 title: Fawcett East London
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: fawcetteastldn@gmail.com
-description: >-
-  Fawcett East London
-baseurl: "" # the subpath of your site, e.g. /blog
-permalink: /blog/:year/:title:output_ext
+description: Fawcett East London
+baseurl: ''
+permalink: "/blog/:year/:title:output_ext"
