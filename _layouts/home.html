@@ -7,7 +7,7 @@ layout: default
 <hr>
 
 {% assign upcoming = site.data.events.events | where:"status", "live" %}
-{% if upcoming %}
+{% if upcoming.size > 0 %}
 <h2>Upcoming Events</h2>
 
 {% for post in upcoming %}
