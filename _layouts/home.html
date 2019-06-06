@@ -6,9 +6,10 @@ layout: default
 
 <hr>
 
+{% assign upcoming = site.data.events.events | where:"status", "live" %}
+{% if upcoming %}
 <h2>Upcoming Events</h2>
 
-{% assign upcoming = site.data.events.events | where:"status", "live" %}
 {% for post in upcoming %}
   <article>
     <h3><a href="{{post.url}}">{{post.name.html}}</a></h3>
@@ -32,6 +33,7 @@ layout: default
 {% endfor %}
 
 <hr>
+{% endif %}
 
 <h2>Latest posts</h2>
 

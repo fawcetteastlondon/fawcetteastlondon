@@ -5,6 +5,7 @@ layout: default
 {% assign upcoming = site.data.events.events | where:"status", "live" %}
 {% assign previous = site.data.events.events | where:"status", "completed" %}
 
+{% if upcoming %}
 <h2>Upcoming Events</h2>
 
 {% for post in upcoming %}
@@ -24,6 +25,7 @@ layout: default
 {% endfor %}
 
 <hr>
+{% endif %}
 
 <h2>Recent Events</h2>
 
