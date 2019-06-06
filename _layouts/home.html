@@ -12,6 +12,12 @@ layout: default
 {% for post in upcoming %}
   <article>
     <h3><a href="{{post.url}}">{{post.name.html}}</a></h3>
+    <h5>
+      {{post.start.local | date: "%d %b %y" }}
+      {% if post.end.local != post.start.local %}
+        &ndash; {{post.end.local | date: "%d %b %y" }}
+      {% endif %}
+    </h5>
     {{post.summary}}
     <div>
     <p>
