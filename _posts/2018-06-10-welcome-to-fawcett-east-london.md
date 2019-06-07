@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Welcome to Fawcett East London!
-date: 2018-06-10T11:46:18.000Z
+date: 2018-06-10 11:46:18 Z
+layout: post
 ---
+
 Welcome to the first in our regular updates on our monthly meetings and what’s coming up over the next few months. There are a lot of exciting events coming up in the next few weeks and it would be great to see lots of you joining us.
 
 ![Pin cushion flyer](/assets/images/untitled.png)
