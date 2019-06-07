@@ -10,5 +10,5 @@ collections:
     output: true
 email: fawcetteastldn@gmail.com
 description: Fawcett East London
-baseurl: ''
+baseurl: 
 permalink: "/blog/:year/:title:output_ext"
