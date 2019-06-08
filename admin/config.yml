@@ -3,9 +3,11 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "assets/images"
 public_folder: "/assets/images"
+site_url: https://fawcetteastlondon.org.uk
 collections:
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
+    label_singular: "Blog post"
     folder: "_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
