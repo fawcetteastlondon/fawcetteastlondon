@@ -1,0 +1,24 @@
+$colors: (
+  purple: #802988,
+  green: #51B0BC,
+  yellow: #FF9900,
+  darkgreen: #458991,
+  red: #C82045
+);
+
+@function colors($base) {
+$color: map-get($colors, $base);
+@return $color;
+}
+
+$breakpoints: (
+  small: "screen and (max-width: 767px)",
+  medium: "screen and (min-width: 768px)",
+  large: "screen and (min-width: 1024px)",
+  very-large: "screen and (min-width: 1280px)"
+);
+
+// Breakpoints mixin
+@mixin breakpoint($size: 'large') {
+    @media #{map-get($breakpoints, $size)} { @content; }
+}

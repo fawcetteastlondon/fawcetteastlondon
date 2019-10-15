@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>
-      {% if page.title %}{{page.title}} - {% endif %}
-      {{site.title}}
-  </title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ 'assets/style.css' | relative_url }}">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% include head.html %}
 </head>
 
 <body>
 
-<div id="header">
-  <img src="/assets/logo-white.svg">
-  <!-- <span class='big'>{{ site.title }}</span>
-  <span class='small'>{{ site.subtitle }}</span> -->
-</div>
-
-<div id="nav">
-  <a href="{{ 'index/' | relative_url }}">Home</a> | 
-  <a href="{{ 'events/'   | relative_url }}">Events</a> |
-  <a href="{{ 'blog/'   | relative_url }}">Blog</a>
-</div>
-
-<hr>
+{% include header.html %}
 
 <div id="content">
+  <div class="container">
   {{ content }}
+  </div>
 </div>
 
-{% include newsletter-signup.html %}
+<div class="container">
+    {% include newsletter-signup.html %}
+</div>
+
 
 </body>
 </html>
