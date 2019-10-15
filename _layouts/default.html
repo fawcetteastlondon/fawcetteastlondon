@@ -6,7 +6,7 @@
       {% if page.title %}{{page.title}} - {% endif %}
       {{site.title}}
   </title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ 'assets/style.css' | relative_url }}">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -14,8 +14,9 @@
 <body>
 
 <div id="header">
-  <span class='big'>{{ site.title }}</span>
-  <span class='small'>{{ site.subtitle }}</span>
+  <img src="/assets/logo-white.svg">
+  <!-- <span class='big'>{{ site.title }}</span>
+  <span class='small'>{{ site.subtitle }}</span> -->
 </div>
 
 <div id="nav">
